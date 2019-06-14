@@ -1,0 +1,34 @@
+= e-Spirit Devcon 2019: Demo Omnichannel Manager
+
+This repository contains the final state of the Omnichannel Manager implementation demo,
+shown during e-Spirit's Devcon 2019 in Berlin.
+ 
+TIP: The Omnichannel Manager distribution (available through e-Spirit's https://www.e-spirit.com/en/support/support-services/technical-support/[Technical Support]) contains a complete reference implementation.
+
+== Setup
+. You need a running FirstSpirit server, that has the following modules installed:
+.. BasicWorkflows
+.. Content as a Service (CaaS)
+.. FirstSpirit ThirdPartyPreview (TPP, aka. Omnichannel Manager)
+. Import the FirstSpirit project using the https://github.com/e-Spirit/FSDevTools[FsDevTools]:
++
+....
+fs-cli -sd fs-project-export --project "FashE" import -lm "*:CREATE_NEW"
+....
+. In the ServerManager:
+.. Set `REST API URL` and `API Key` in the `CaaS Service` https://docs.e-spirit.com/module/caas/CaaS_Documentation_EN.html#caasconfig[configuration]
+.. Add the project component `CaaSProjectConfiguration` to your project and set `REST API URL` and `API Key` for the https://docs.e-spirit.com/module/caas/CaaS_Documentation_EN.html#tpp_conf[`Preview state`]
+.. Configure the media deployment
+... Open the schedule `Deployment Live (Online CaaS)`
+... Open task `Deploy media files`
+... Replace `LOCAL_PATH_TO_PROJECT` with the absolute path to where you cloned this repository
+.. Add and install the web components `BasicWorkflows_ContentCreator_Library` and `FirstSpirit ThirdParyPreview WebApp` to the `ContentCreator`
+. In the SiteArchitect:
+.. Set workflow permissions for the Release and Delete workflow on the PageStore root and the SiteStore root
+.. Release the project settings page
+. In `fashe-colorlib/js/ocm/fashe-ocm.js`:
+.. In line 9, insert the URLs to the REST APIs of your Preview and Online CaaS
+.. In line 10, inset the API Key to use with your CaaS (for simplicity reasons, we expect the same API Key to be used for the Preview and Online CaaS)
+. Run the FashE shop locally
+.. Staging: `npx live-server fashe-colorlib --port=3000 --host=localhost`
+.. Production: `npx live-server fashe-colorlib --port=4000 --host=localhost`

@@ -1,0 +1,12 @@
+[self]
+uid=dummy
+gid=22b98a6c-9cab-4ad3-bbee-0b585d9d749f
+uidType=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.PageImpl
+
+[requiredProjectId]
+uid=homepage
+gid=9ddaf611-05ac-4d55-b979-bd5cf663e9f9
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.PageTemplateImpl
+

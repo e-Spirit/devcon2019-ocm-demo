@@ -1,0 +1,22 @@
+//!Beanshell
+import de.espirit.firstspirit.access.AdminService;
+import de.espirit.firstspirit.access.ServicesBroker;
+import de.espirit.firstspirit.agency.OperationAgent;
+import de.espirit.firstspirit.ui.operations.RequestOperation;
+import de.espirit.firstspirit.access.schedule.RunState;
+
+scheduleName = "Deployment Live (Online CaaS)";
+scheduleEntry = null;
+
+_project = context.getProject();
+
+scheduleStorage = context.requireSpecialist(ServicesBroker.TYPE).getService(AdminService.class).getScheduleStorage(); 
+scheduleEntry = scheduleStorage.getScheduleEntry(_project, scheduleName);
+
+if(scheduleEntry != null){
+    control = scheduleEntry.execute();// Executing the deployment
+    control.awaitTermination();
+    context.doTransition("finish");
+} else {
+    context.logError("The ScheduleEntry '" + schedulename + "' doesn't exist!");
+}

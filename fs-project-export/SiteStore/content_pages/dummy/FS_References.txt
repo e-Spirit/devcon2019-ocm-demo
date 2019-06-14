@@ -1,0 +1,12 @@
+[self]
+uid=dummy
+gid=d8fd9735-9761-4789-9e5d-7136f85d1731
+uidType=SITESTORE_LEAF
+class=de.espirit.firstspirit.store.access.sitestore.PageRefImpl
+
+[requiredId]
+uid=dummy
+gid=22b98a6c-9cab-4ad3-bbee-0b585d9d749f
+uidType=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.PageImpl
+

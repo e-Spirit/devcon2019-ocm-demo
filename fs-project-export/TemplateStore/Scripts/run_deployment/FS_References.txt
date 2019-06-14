@@ -1,0 +1,6 @@
+[self]
+uid=run_deployment
+gid=d1b8123e-5249-4090-a62c-924f303f5f50
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

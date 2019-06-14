@@ -1,0 +1,6 @@
+[self]
+uid=dummy~#~stage
+gid=b085b655-0ef8-4de3-95f3-966507db2513
+store=PAGESTORE
+class=de.espirit.firstspirit.store.access.pagestore.BodyImpl
+

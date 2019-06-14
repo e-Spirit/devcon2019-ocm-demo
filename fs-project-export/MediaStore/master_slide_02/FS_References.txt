@@ -1,0 +1,6 @@
+[self]
+uid=master_slide_02
+gid=166336d3-b0b1-4f78-8b63-d37fd7538d40
+uidType=MEDIASTORE_LEAF
+class=de.espirit.firstspirit.store.access.mediastore.MediaImpl
+

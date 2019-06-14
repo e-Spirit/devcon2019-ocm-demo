@@ -1,0 +1,16 @@
+# mimeType        name
+text/plain        Modules/ProjectApps/caas-fsm/CaaSProjectConfiguration/configuration.properties
+text/plain        Modules/ProjectApps/caas-fsm/CaaSProjectConfiguration/version.txt
+text/plain        Modules/Server/caas-fsm/Service/caas-service/caas-service.ini
+text/xml          Project/ConversionTables.xml
+text/xml          Project/CustomProperties.xml
+text/xml          Project/EditorialLanguages.xml
+text/xml          Project/ExternalGroups.xml
+text/xml          Project/Groups.xml
+text/xml          Project/Languages.xml
+text/xml          Project/PresentationChannels.xml
+text/xml          Project/Project.xml
+text/xml          Project/Resolutions.xml
+text/xml          Project/TemplateSets.xml
+text/xml          Project/Users.xml
+text/xml          Schedule/Entries.xml

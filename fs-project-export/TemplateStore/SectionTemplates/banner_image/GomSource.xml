@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CMS_MODULE>
+
+  <CMS_INPUT_TEXT name="st_caption1" hFill="yes" singleLine="no" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Caption 1"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <CMS_INPUT_TEXT name="st_caption2" hFill="yes" singleLine="no" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Caption 2"/>
+    </LANGINFOS>
+  </CMS_INPUT_TEXT>
+
+  <FS_REFERENCE name="st_image" hFill="yes" useLanguages="no">
+    <FILTER>
+      <ALLOW type="picture"/>
+    </FILTER>
+    <LANGINFOS>
+      <LANGINFO lang="*" label="Image"/>
+    </LANGINFOS>
+    <PROJECTS>
+      <LOCAL name=".">
+        <SOURCES>
+          <FOLDER name="root" store="mediastore"/>
+        </SOURCES>
+      </LOCAL>
+    </PROJECTS>
+  </FS_REFERENCE>
+
+  <FS_CATALOG name="st_ctaButton" height="1" useLanguages="yes">
+    <LANGINFOS>
+      <LANGINFO lang="*" label="CTA Button"/>
+    </LANGINFOS>
+    <TEMPLATES type="link">
+      <TEMPLATE uid="link"/>
+    </TEMPLATES>
+  </FS_CATALOG>
+
+</CMS_MODULE>

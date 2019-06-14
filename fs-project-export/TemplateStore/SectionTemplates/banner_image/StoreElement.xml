@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEMPLATE filename="banner_image" id="-9117898514961641641" templateid="-6297638667063928489" type="section">
+	<EXTENSION anchor="0" file="html" link="html" templateSet="9062318847741885912"/>
+	<EXTENSION anchor="0" file="json" link="json" templateSet="-1285658006509869299"/>
+	<LANG displayname="Banner Bild" language="DE"/>
+	<LANG displayname="Banner Image" language="EN"/>
+</TEMPLATE>

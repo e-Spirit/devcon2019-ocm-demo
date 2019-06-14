@@ -1,0 +1,6 @@
+[self]
+uid=wf_delete_show_related
+gid=17bca962-8891-4e5b-98ec-9237c6713515
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.ScriptImpl
+

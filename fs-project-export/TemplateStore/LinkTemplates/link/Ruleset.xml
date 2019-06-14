@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="lt_linkText"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="save">
+					<PROPERTY name="valid" source="lt_linkText"/>
+					<MESSAGE lang="*" text="Please enter a link text."/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="lt_url"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="save">
+					<PROPERTY name="valid" source="lt_url"/>
+					<MESSAGE lang="*" text="Please enter an URL."/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+</RULES>

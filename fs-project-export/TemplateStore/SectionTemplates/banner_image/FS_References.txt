@@ -1,0 +1,17 @@
+[self]
+uid=banner_image
+gid=c5389541-ed60-4577-92fb-cfbf4d60106e
+uidType=TEMPLATESTORE
+class=de.espirit.firstspirit.store.access.templatestore.SectionTemplateImpl
+
+[optionalId]
+uid=root
+gid=02681229-ad84-4915-bf1a-94ff71862d2a
+uidType=MEDIASTORE_FOLDER
+class=de.espirit.firstspirit.store.access.mediastore.MediaStoreRootImpl
+
+uid=link
+gid=7a385f4f-fd10-406f-a08f-ef0a1cb43f08
+uidType=TEMPLATESTORE_LINKTEMPLATE
+class=de.espirit.firstspirit.store.access.templatestore.LinkTemplateImpl
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RULES>
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_caption1"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="save">
+					<PROPERTY name="valid" source="st_caption1"/>
+					<MESSAGE lang="*" text="Please enter a caption."/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_caption2"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="save">
+					<PROPERTY name="valid" source="st_caption2"/>
+					<MESSAGE lang="*" text="Please enter a caption."/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<PROPERTY name="EMPTY" source="st_image"/>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="save">
+					<PROPERTY name="valid" source="st_image"/>
+					<MESSAGE lang="*" text="Please select an image."/>
+				</VALIDATION>
+			</NOT>
+		</DO>
+	</RULE>
+	<RULE>
+		<WITH>
+			<LESS_THAN>
+				<PROPERTY name="SIZE" source="st_ctaButton"/>
+				<NUMBER>1</NUMBER>
+			</LESS_THAN>
+		</WITH>
+		<DO>
+			<NOT>
+				<VALIDATION scope="save">
+					<PROPERTY name="valid" source="st_ctaButton"/>
+					<MESSAGE lang="*" text="Please add a CTA button."/>
+				</VALIDATION>
+			</NOT>
+			<PROPERTY name="NEW" source="st_ctaButton"/>
+		</DO>
+	</RULE>
+</RULES>

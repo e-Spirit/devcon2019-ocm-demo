@@ -1,0 +1,1 @@
+$CMS_VALUE(json(#global.page).set("previewId", previewId(element:#global.node)))$
