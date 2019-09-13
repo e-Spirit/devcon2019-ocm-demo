@@ -17,8 +17,8 @@ export default class Page {
 
     async applyPage(caasDocument) {
         this.setPreviewElementIfConnected(caasDocument, await this.snap.isConnected);
-        if (Array.isArray(caasDocument.bodies) && caasDocument.bodies.length > 0) {
-            caasDocument.bodies.forEach(this.applyBody);
+        if (Array.isArray(caasDocument.children) && caasDocument.children.length > 0) {
+            caasDocument.children.forEach(this.applyBody);
         } else {
             document.querySelectorAll("[data-fs-body]").forEach(
                 bodyElement => bodyElement.firstElementChild.dataset.previewId = "custom:noCaasDocument");
@@ -35,12 +35,12 @@ export default class Page {
     applyBody(body) {
         const bodyElement = document.querySelector(`[data-fs-body="${body.name}"`);
         if (bodyElement) {
-            if (Array.isArray(body.sections) && body.sections.length > 0) {
+            if (Array.isArray(body.children) && body.children.length > 0) {
                 while (bodyElement.lastChild) {
                     bodyElement.lastChild.remove();
                 }
 
-                body.sections
+                body.children
                     .map(section => SectionRenderer[section.template].render(section))
                     .forEach(sectionElement => bodyElement.appendChild(sectionElement));
             } else {

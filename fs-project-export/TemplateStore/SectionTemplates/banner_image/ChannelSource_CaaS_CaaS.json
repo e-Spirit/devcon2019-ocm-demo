@@ -2,8 +2,9 @@ $CMS_SET(set_json, json(#global.section).set("previewId", previewId()))$
 $CMS_SET(void,
 	set_json
 		.set("template", #global.section.template.uid)
-		.get("data")
+		.get("formData")
 		.get("st_image")
 		.set("previewId", previewId(element:st_image))
+		.get("value")
 		.set("url", ref(st_image, res:"Banner", abs:1).url))$
 $CMS_VALUE(set_json)$
